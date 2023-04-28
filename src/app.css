@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		font-size: 10px;
+		@apply font-base font-medium text-black;
+	}
+}
+
+@layer utilities {
+	.container {
+		@apply mx-auto w-full max-w-[120rem];
+	}
+	.container.big {
+		@apply max-w-[140rem];
+	}
+}
