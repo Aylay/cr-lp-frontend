@@ -5,6 +5,7 @@
 	import HpBlock3 from '$lib/components/block/HPBlock3.svelte';
 	import HpBlock4 from '$lib/components/block/HPBlock4.svelte';
 	import HpBlock5 from '$lib/components/block/HPBlock5.svelte';
+	import HpBlock6 from '$lib/components/block/HPBlock6.svelte';
 </script>
 
 <HpBlock1 />
@@ -16,3 +17,5 @@
 <HpBlock4 />
 
 <HpBlock5 />
+
+<HpBlock6 />
