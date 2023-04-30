@@ -45,12 +45,17 @@
 			<p
 				class="mb-8 text-[1.4rem] leading-[1.8rem] text-slate-gray lg:text-[1.6rem] lg:leading-[2.2rem]"
 			>
-				Fondée en 1892, Cafés Richard est une maison qui puise ses racines dans une belle histoire de famille. Torréfacteur à la française, Cafés Richard, est attentif au moindre détail avec une expertise et une connaissance de la torréfaction transmis de génération en génération garant d’une qualité unique.
+				Fondée en 1892, Cafés Richard est une maison qui puise ses racines dans une belle histoire
+				de famille. Torréfacteur à la française, Cafés Richard, est attentif au moindre détail avec
+				une expertise et une connaissance de la torréfaction transmis de génération en génération
+				garant d’une qualité unique.
 			</p>
 			<p
 				class="mb-8 text-[1.4rem] leading-[1.8rem] text-slate-gray lg:text-[1.6rem] lg:leading-[2.2rem]"
 			>
-				Derrière chaque tasse de café, il y a le savoir-faire et la créativité d’une communauté d’hommes et de femmes qui cultivent, torréfient, distribuent et préparent un produit avec	passion.
+				Derrière chaque tasse de café, il y a le savoir-faire et la créativité d’une communauté
+				d’hommes et de femmes qui cultivent, torréfient, distribuent et préparent un produit avec
+				passion.
 			</p>
 			<p
 				class="text-[1.4rem] font-bold leading-[1.8rem] text-crimson lg:text-[1.6rem] lg:leading-[2.2rem]"

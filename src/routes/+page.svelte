@@ -10,7 +10,6 @@
 	import HpBlock8 from '$lib/components/block/HPBlock8.svelte';
 	import HpBlock9 from '$lib/components/block/HPBlock9.svelte';
 	import LpFooter from '$lib/components/block/LPFooter.svelte';
-
 </script>
 
 <HpBlock1 />
