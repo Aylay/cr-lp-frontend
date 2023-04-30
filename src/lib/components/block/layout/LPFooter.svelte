@@ -1,8 +1,9 @@
 <script lang="ts">
 	import Logo from '$lib/components/svg/Logo.svelte';
+	import { page } from '$app/stores';
 </script>
 
-<div class="relative mt-48 bg-crimson pb-20 pt-32 lg:mt-64 lg:pb-24 lg:pt-40">
+<div class="relative  bg-crimson pb-20 pt-32 lg:pb-24 lg:pt-40 {!$page.route.id.includes('confirmation') ? 'lg:mt-64 mt-48' : ''}">
 	<Logo
 		newClass="max-w-[16rem] lg:max-w-[20rem] w-full h-auto absolute top-0 transform -translate-y-1/2 left-1/2 -translate-x-1/2"
 	/>

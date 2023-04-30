@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { inview } from 'svelte-inview';
 	import type { ObserverEventDetails, Options } from 'svelte-inview';
-	import Logo from '../svg/Logo.svelte';
-	import MachineCafe from '../svg/MachineCafe.svelte';
-	import CafeGrains from '../svg/CafeGrains.svelte';
-	import Service from '../svg/Service.svelte';
-	import LeadForm from '../LeadForm.svelte';
+	import Logo from '$lib/components/svg/Logo.svelte';
+	import MachineCafe from '$lib/components/svg/MachineCafe.svelte';
+	import CafeGrains from '$lib/components/svg/CafeGrains.svelte';
+	import Service from '$lib/components/svg/Service.svelte';
+	import LeadForm from '$lib/components/LeadForm.svelte';
 
 	let isInView: boolean;
 	const options: Options = {

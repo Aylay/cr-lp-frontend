@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { inview } from 'svelte-inview';
 	import type { ObserverEventDetails, Options } from 'svelte-inview';
-	import MaisonFamiliale from '../svg/MaisonFamiliale.svelte';
-	import Torrefacteur from '../svg/Torrefacteur.svelte';
-	import Croissant from '../svg/Croissant.svelte';
-	import Salaries from '../svg/Salaries.svelte';
+	import MaisonFamiliale from '$lib/components/svg/MaisonFamiliale.svelte';
+	import Torrefacteur from '$lib/components/svg/Torrefacteur.svelte';
+	import Croissant from '$lib/components/svg/Croissant.svelte';
+	import Salaries from '$lib/components/svg/Salaries.svelte';
 
 	let isInView: boolean;
 	const options: Options = {

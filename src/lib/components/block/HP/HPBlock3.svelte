@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { inview } from 'svelte-inview';
 	import type { ObserverEventDetails, Options } from 'svelte-inview';
-	import MachineCafe from '../svg/MachineCafe.svelte';
-	import Ecologique from '../svg/Ecologique.svelte';
-	import Service from '../svg/Service.svelte';
+	import MachineCafe from '$lib/components/svg/MachineCafe.svelte';
+	import Ecologique from '$lib/components/svg/Ecologique.svelte';
+	import Service from '$lib/components/svg/Service.svelte';
 
 	let isInView: boolean;
 	const options: Options = {

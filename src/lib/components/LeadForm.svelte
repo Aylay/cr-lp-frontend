@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import SpecificInput from '$lib/components/block/utilities/SpecificInput.svelte';
 	import Hoverable from '$lib/components/utilities/Hoverable.svelte';
 
@@ -51,6 +52,8 @@
 				'Content-Type': 'application/json'
 			}
 		});
+
+		goto('/confirmation')
 	}
 
 	function checkFormError() {

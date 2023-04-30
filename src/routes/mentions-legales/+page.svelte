@@ -3,7 +3,7 @@
 	import Logo from '$lib/components/svg/Logo.svelte';
 	import { inview } from 'svelte-inview';
 	import type { ObserverEventDetails, Options } from 'svelte-inview';
-	import LpFooter from '$lib/components/block/LPFooter.svelte';
+	import LpFooter from '$lib/components/block/layout/LPFooter.svelte';
 
 	let isInView: boolean;
 	const options: Options = {

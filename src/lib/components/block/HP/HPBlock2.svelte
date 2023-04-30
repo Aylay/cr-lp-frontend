@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { inview } from 'svelte-inview';
 	import type { ObserverEventDetails, Options } from 'svelte-inview';
-	import Engagee from '../svg/Engagee.svelte';
-	import Experte from '../svg/Experte.svelte';
-	import Ecologique from '../svg/Ecologique.svelte';
-	import Ensemble from '../svg/Ensemble.svelte';
+	import Engagee from '$lib/components/svg/Engagee.svelte';
+	import Experte from '$lib/components/svg/Experte.svelte';
+	import Ecologique from '$lib/components/svg/Ecologique.svelte';
+	import Ensemble from '$lib/components/svg/Ensemble.svelte';
 
 	let isInView: boolean;
 	const options: Options = {

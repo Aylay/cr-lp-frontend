@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { inview } from 'svelte-inview';
 	import type { ObserverEventDetails, Options } from 'svelte-inview';
-	import Cta from '../common/CTA.svelte';
+	import Cta from '$lib/components/common/CTA.svelte';
 
 	let isInView: boolean;
 	const options: Options = {
