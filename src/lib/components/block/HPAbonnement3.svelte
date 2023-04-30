@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { inview } from 'svelte-inview';
 	import type { ObserverEventDetails, Options } from 'svelte-inview';
-	import CafeGrains from '../svg/CafeGrains.svelte';
 	import Mug from '../svg/Mug.svelte';
 	import Sav from '../svg/SAV.svelte';
 	import Cta from '../common/CTA.svelte';
@@ -22,9 +21,8 @@
 			src: '/img/abonnement-premium-main.png',
 			alt: "Plusieurs photos représentant l'abonnement Cafés Richard premium"
 		},
-		title: "L’abonnement Cafés Premium",
-		text1:
-			'Des expressos raffinés à la crème onctueuse',
+		title: 'L’abonnement Cafés Premium',
+		text1: 'Des expressos raffinés à la crème onctueuse',
 		text2:
 			'Issus des meilleures origines, une sélection de 5 assemblages dans la plus pure tradition de l’expresso, du plus intense au plus velouté. La solution capsule convient parfaitement au petit bureau qui souhaite avoir une qualité en tasse toujours parfaite.',
 		text3:
@@ -53,11 +51,17 @@
 				unitPrice: '0,32'
 			}
 		],
-    legals: "Tarif à titre indicatif – demandez-nous un devis sur-mesure - Engagement 12 mois – livraison et SAV inclus"
+		legals:
+			'Tarif à titre indicatif – demandez-nous un devis sur-mesure - Engagement 12 mois – livraison et SAV inclus'
 	};
 </script>
 
-<div class="relative max-lg:px-8 max-lg:pt-12 pt-32" use:inview={options} on:inview_change={handleChange} id={offer.id}>
+<div
+	class="relative pt-32 max-lg:px-8 max-lg:pt-12"
+	use:inview={options}
+	on:inview_change={handleChange}
+	id={offer.id}
+>
 	<div class="container flex items-center justify-between gap-32 max-lg:flex-col">
 		<div class="flex flex-1 flex-col max-lg:order-2">
 			<h3
@@ -69,7 +73,7 @@
 				{offer.text1}
 			</h4>
 			<p
-				class="text-[1.4rem] leading-[1.8rem] text-slate-gray lg:text-[1.6rem] lg:leading-[2.2rem] mb-8"
+				class="mb-8 text-[1.4rem] leading-[1.8rem] text-slate-gray lg:text-[1.6rem] lg:leading-[2.2rem]"
 			>
 				{offer.text2}
 			</p>
@@ -80,7 +84,13 @@
 			</p>
 		</div>
 		<div class="flex-1 max-lg:order-1">
-			<img src={offer.img.src} alt={offer.img.alt} />
+			{#if isInView}
+				<img
+					src={offer.img.src}
+					alt={offer.img.alt}
+					class={isInView ? 'animate-fade' : 'opacity-0'}
+				/>
+			{/if}
 		</div>
 	</div>
 </div>
@@ -106,7 +116,7 @@
 			</p>
 		</div>
 	</div>
-	<div class="w-full lg:max-w-[65%] max-lg:mt-12 max-lg:px-20">
+	<div class="w-full max-lg:mt-12 max-lg:px-20 lg:max-w-[65%]">
 		<div class="flex justify-center gap-10 max-lg:flex-col">
 			{#each offer.offers as unitOffer}
 				<div class="flex-1 rounded-lg border border-solid border-geyser py-9 text-center">
@@ -114,7 +124,7 @@
 						Abonnement
 					</p>
 					<h4
-						class="text-[1.6rem] font-bold leading-[1.2rem] text-crimson lg:text-[2.5rem] lg:leading-[2.2rem] pb-4"
+						class="pb-4 text-[1.6rem] font-bold leading-[1.2rem] text-crimson lg:text-[2.5rem] lg:leading-[2.2rem]"
 					>
 						{unitOffer.nbCoffee} cafés
 					</h4>
@@ -134,23 +144,23 @@
 						</div>
 					</div>
 					<hr class="mx-auto my-5 h-[2px] w-12 bg-crimson" />
-          <p class="font-highlight font-bold italic text-[2rem] leading-[2.2rem] text-crimson pt-4">
-            {unitOffer.price}€ HT /mois
-          </p>
-          <p class="text-[1.4rem] leading-[2.2rem] text-slate-gray mt-2">
-            {unitOffer.unitPrice}€ ht /café
-          </p>
+					<p class="pt-4 font-highlight text-[2rem] font-bold italic leading-[2.2rem] text-crimson">
+						{unitOffer.price}€ HT /mois
+					</p>
+					<p class="mt-2 text-[1.4rem] leading-[2.2rem] text-slate-gray">
+						{unitOffer.unitPrice}€ ht /café
+					</p>
 				</div>
 			{/each}
 		</div>
 	</div>
 </div>
 
-<div class="container flex flex-col items-center mt-10 gap-10 pb-32 max-lg:px-8">
-  <p class="text-[1.3rem] leading-[1.6rem] text-slate-gray text-center">
-    {@html offer.legals}
-  </p>
-  <div>
-    <Cta label="Demandez-nous un devis personnalisé" />
-  </div>
+<div class="container mt-10 flex flex-col items-center gap-10 pb-32 max-lg:px-8 lg:pb-64">
+	<p class="text-center text-[1.3rem] leading-[1.6rem] text-slate-gray">
+		{@html offer.legals}
+	</p>
+	<div>
+		<Cta label="Demandez-nous un devis personnalisé" />
+	</div>
 </div>

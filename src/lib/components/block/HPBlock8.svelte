@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { inview } from 'svelte-inview';
 	import type { ObserverEventDetails, Options } from 'svelte-inview';
-	import Engagee from '../svg/Engagee.svelte';
-	import Experte from '../svg/Experte.svelte';
-	import Ecologique from '../svg/Ecologique.svelte';
-	import Ensemble from '../svg/Ensemble.svelte';
+	import MaisonFamiliale from '../svg/MaisonFamiliale.svelte';
+	import Torrefacteur from '../svg/Torrefacteur.svelte';
+	import Croissant from '../svg/Croissant.svelte';
+	import Salaries from '../svg/Salaries.svelte';
 
 	let isInView: boolean;
 	const options: Options = {
@@ -26,69 +26,68 @@
 		<div
 			class="mx-auto flex h-[6.2rem] w-[6.2rem] items-end justify-center lg:h-[8.5rem] lg:w-[8.5rem]"
 		>
-			<Engagee newClass="h-auto w-full" />
+			<MaisonFamiliale newClass="h-auto w-full" />
 		</div>
 		<h3
 			class="mt-10 text-center font-highlight text-[2rem] font-bold leading-[3rem] lg:text-[2.5rem]"
 		>
-			Engagée
+			Une Maison familiale
 		</h3>
 		<p
 			class="mt-7 text-center text-[1.4rem] leading-[1.8rem] text-slate-gray lg:text-[1.6rem] lg:leading-[2.2rem]"
 		>
-			Du grain à la tasse, choisissez votre café parmi nos cafés Tradition ou Engagés certifiés BIO
-			ou Max Havelaar.
+			Fondée en 1892.
 		</p>
 	</div>
 	<div class="flex flex-col animate-delay-[250ms] {isInView ? 'animate-fade' : 'opacity-0'}">
 		<div
 			class="mx-auto flex h-[6.2rem] w-[6.2rem] items-end justify-center lg:h-[8.5rem] lg:w-[8.5rem]"
 		>
-			<Experte newClass="h-auto w-full" />
+			<Croissant newClass="h-auto w-full" />
 		</div>
 		<h3
 			class="mt-10 text-center font-highlight text-[2rem] font-bold leading-[3rem] lg:text-[2.5rem]"
 		>
-			Experte
+			Un torréfacteur<br />à la française
 		</h3>
 		<p
 			class="mt-7 text-center text-[1.4rem] leading-[1.8rem] text-slate-gray lg:text-[1.6rem] lg:leading-[2.2rem]"
 		>
-			Maison familiale depuis 1892, Cafés Richard est la référence de l’art français du café.
+			Depuis trois générations.
 		</p>
 	</div>
 	<div class="flex flex-col animate-delay-500 {isInView ? 'animate-fade' : 'opacity-0'}">
 		<div
 			class="mx-auto flex h-[6.2rem] w-[6.2rem] items-end justify-center lg:h-[8.5rem] lg:w-[8.5rem]"
 		>
-			<Ecologique newClass="h-auto w-full" />
+			<Torrefacteur newClass="h-full w-auto" />
 		</div>
 		<h3
 			class="mt-10 text-center font-highlight text-[2rem] font-bold leading-[3rem] lg:text-[2.5rem]"
 		>
-			Ecologique
+			La référence<br />café du marché
 		</h3>
 		<p
 			class="mt-7 text-center text-[1.4rem] leading-[1.8rem] text-slate-gray lg:text-[1.6rem] lg:leading-[2.2rem]"
 		>
-			Choisissez la livraison à vélo pour tous vos bureaux à Paris intramuros.
+			Hors domicile.
 		</p>
 	</div>
 	<div class="flex flex-col animate-delay-[750ms] {isInView ? 'animate-fade' : 'opacity-0'}">
 		<div
 			class="mx-auto flex h-[6.2rem] w-[6.2rem] items-end justify-center lg:h-[8.5rem] lg:w-[8.5rem]"
 		>
-			<Ensemble newClass="h-auto w-full" />
+			<Salaries newClass="h-full w-auto" />
 		</div>
 		<h3
 			class="mt-10 text-center font-highlight text-[2rem] font-bold leading-[3rem] lg:text-[2.5rem]"
 		>
-			Ensemble
+			450 salariés<br />en France
 		</h3>
 		<p
 			class="mt-7 text-center text-[1.4rem] leading-[1.8rem] text-slate-gray lg:text-[1.6rem] lg:leading-[2.2rem]"
 		>
-			Retrouvez la convivialité des pauses au bureau avec vos collègues.
+			Qui sont experts café.
 		</p>
 	</div>
 </div>
