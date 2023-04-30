@@ -16,6 +16,14 @@
 	};
 </script>
 
+<svelte:head>
+	<title>Mentions légales | Cafés Richard</title>
+	<meta name="title" content="Mentions légales | Cafés Richard" />
+	<meta property="og:title" content="Mentions légales | Cafés Richard" />
+	<meta name="description" content="" />
+	<meta property="og:description" content="" />
+</svelte:head>
+
 <div class="relative" use:inview={options} on:inview_change={handleChange}>
 	<div class="inset-x-0 top-0 -z-10 h-[60rem] w-full">
 		{#if isInView}
