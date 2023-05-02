@@ -36,7 +36,7 @@
 		<Logo newClass="max-w-[16rem] 2xl:max-w-[20rem] w-full h-auto" />
 	</div>
 
-	<div class="big container flex items-center justify-between max-lg:flex-col lg:gap-56">
+	<div class="big container flex items-center justify-between max-lg:flex-col lg:gap-56 relative z-20">
 		<div class="relative flex flex-1 flex-col max-lg:px-10 max-lg:pb-20 max-lg:pt-5">
 			<div class="absolute inset-0 h-full w-full lg:hidden">
 				{#if isInView}
