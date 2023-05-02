@@ -19,7 +19,7 @@
 </script>
 
 <div
-	class="relative items-center justify-center lg:flex lg:h-screen"
+	class="relative items-center justify-center lg:flex lg:h-screen bg-black"
 	use:inview={options}
 	on:inview_change={handleChange}
 >
