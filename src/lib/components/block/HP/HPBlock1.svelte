@@ -23,7 +23,7 @@
 	use:inview={options}
 	on:inview_change={handleChange}
 >
-	<div class="absolute inset-0 -z-10 h-full w-full max-lg:hidden">
+	<div class="absolute inset-0 h-full w-full max-lg:hidden">
 		{#if isInView}
 			<img
 				src="/img/ocs-cafes-richard.jpg"
@@ -32,13 +32,13 @@
 			/>
 		{/if}
 	</div>
-	<div class="absolute left-1/2 top-8 z-0 -translate-x-1/2 transform max-lg:hidden">
+	<div class="absolute left-1/2 top-8 z-10 -translate-x-1/2 transform max-lg:hidden">
 		<Logo newClass="max-w-[16rem] 2xl:max-w-[20rem] w-full h-auto" />
 	</div>
 
 	<div class="big container flex items-center justify-between max-lg:flex-col lg:gap-56">
 		<div class="relative flex flex-1 flex-col max-lg:px-10 max-lg:pb-20 max-lg:pt-5">
-			<div class="absolute inset-0 -z-10 h-full w-full lg:hidden">
+			<div class="absolute inset-0 h-full w-full lg:hidden">
 				{#if isInView}
 					<img
 						src="/img/ocs-cafes-richard-mobile.jpg"
