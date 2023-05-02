@@ -32,7 +32,7 @@
 			/>
 		{/if}
 	</div>
-	<div class="absolute left-1/2 transform -translate-x-1/2 top-8 z-0 max-lg:hidden">
+	<div class="absolute left-1/2 top-8 z-0 -translate-x-1/2 transform max-lg:hidden">
 		<Logo newClass="max-w-[16rem] 2xl:max-w-[20rem] w-full h-auto" />
 	</div>
 

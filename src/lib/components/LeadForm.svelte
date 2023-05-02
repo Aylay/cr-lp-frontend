@@ -53,7 +53,7 @@
 			}
 		});
 
-		goto('/confirmation')
+		goto('/confirmation');
 	}
 
 	function checkFormError() {

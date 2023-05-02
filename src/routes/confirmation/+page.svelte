@@ -4,15 +4,15 @@
 	import Logo from '$lib/components/svg/Logo.svelte';
 	import LpFooter from '$lib/components/block/layout/LPFooter.svelte';
 
-let isInView: boolean;
-const options: Options = {
-	unobserveOnEnter: true,
-	rootMargin: '-200px'
-};
+	let isInView: boolean;
+	const options: Options = {
+		unobserveOnEnter: true,
+		rootMargin: '-200px'
+	};
 
-const handleChange = ({ detail }: CustomEvent<ObserverEventDetails>) => {
-	isInView = detail.inView;
-};
+	const handleChange = ({ detail }: CustomEvent<ObserverEventDetails>) => {
+		isInView = detail.inView;
+	};
 </script>
 
 <svelte:head>
@@ -28,6 +28,8 @@ const handleChange = ({ detail }: CustomEvent<ObserverEventDetails>) => {
 		content="Cafés Richard vous propose un abonnement en café grains, POD ou capsule qui associe la machine à café, le café et les services tout compris. Abonnez-vous en toute sérénité à nos solutions café pour une pause-café au bureau tout compris."
 	/>
 	<meta name="robots" content="noindex, nofollow" />
+	<link rel="preload" as="image" href="/img/ocs-cafes-richard.jpg" />
+	<link rel="preload" as="image" href="/img/ocs-cafes-richard-mobile.jpg" />
 </svelte:head>
 
 <div
@@ -86,6 +88,5 @@ const handleChange = ({ detail }: CustomEvent<ObserverEventDetails>) => {
 		</div>
 	</div>
 </div>
-
 
 <LpFooter />
