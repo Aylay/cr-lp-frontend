@@ -32,8 +32,8 @@
 			/>
 		{/if}
 	</div>
-	<div class="big container absolute inset-x-0 top-8 z-0 max-lg:hidden">
-		<Logo newClass="max-w-[20rem] w-full h-auto" />
+	<div class="absolute left-1/2 transform -translate-x-1/2 top-8 z-0 max-lg:hidden">
+		<Logo newClass="max-w-[16rem] 2xl:max-w-[20rem] w-full h-auto" />
 	</div>
 
 	<div class="big container flex items-center justify-between max-lg:flex-col lg:gap-56">

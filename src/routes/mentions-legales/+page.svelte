@@ -1,5 +1,4 @@
 <script lang="ts">
-	import '../../app.css';
 	import Logo from '$lib/components/svg/Logo.svelte';
 	import { inview } from 'svelte-inview';
 	import type { ObserverEventDetails, Options } from 'svelte-inview';

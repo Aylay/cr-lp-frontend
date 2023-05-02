@@ -1,5 +1,4 @@
 <script lang="ts">
-	import '../app.css';
 	import HpBlock1 from '$lib/components/block/HP/HPBlock1.svelte';
 	import HpBlock2 from '$lib/components/block/HP/HPBlock2.svelte';
 	import HpBlock3 from '$lib/components/block/HP/HPBlock3.svelte';

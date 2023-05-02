@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { inview } from 'svelte-inview';
 	import type { ObserverEventDetails, Options } from 'svelte-inview';
-	import '../../app.css';
 	import Logo from '$lib/components/svg/Logo.svelte';
 	import LpFooter from '$lib/components/block/layout/LPFooter.svelte';
 
@@ -46,7 +45,7 @@ const handleChange = ({ detail }: CustomEvent<ObserverEventDetails>) => {
 		{/if}
 	</div>
 	<div class="big container absolute inset-x-0 top-8 z-0 max-lg:hidden">
-		<Logo newClass="max-w-[20rem] w-full h-auto" />
+		<Logo newClass="max-w-[16rem] 2xl:max-w-[20rem] w-full h-auto" />
 	</div>
 
 	<div class="big container flex items-center justify-between">
