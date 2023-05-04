@@ -1,12 +1,14 @@
 <script lang="ts">
 	import { inview } from 'svelte-inview';
 	import type { ObserverEventDetails, Options } from 'svelte-inview';
+	import { page } from '$app/stores';
+
 	import Cta from '$lib/components/common/CTA.svelte';
 
 	let isInView: boolean;
 	const options: Options = {
 		unobserveOnEnter: true,
-		rootMargin: '-200px'
+		rootMargin: '0px'
 	};
 
 	const handleChange = ({ detail }: CustomEvent<ObserverEventDetails>) => {
@@ -52,8 +54,10 @@
 		>
 			Laissez vous tenter par une dégustation !
 		</p>
-		<div>
-			<Cta label="Demandez-nous un devis personnalisé" />
-		</div>
+		{#if !$page.route.id.includes('confirmation')}
+			<div>
+				<Cta label="Demandez-nous un devis personnalisé" />
+			</div>
+		{/if}
 	</div>
 </div>

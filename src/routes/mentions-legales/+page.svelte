@@ -7,7 +7,7 @@
 	let isInView: boolean;
 	const options: Options = {
 		unobserveOnEnter: true,
-		rootMargin: '-200px'
+		rootMargin: '0px'
 	};
 
 	const handleChange = ({ detail }: CustomEvent<ObserverEventDetails>) => {
@@ -53,12 +53,12 @@
 	</div>
 	<div class="container mt-16 max-lg:px-8 lg:mt-32">
 		<h1
-			class="mb-8 text-[2.8rem] font-bold leading-[3.2rem] text-crimson lg:text-[3.8rem] lg:leading-[4.56rem]"
+			class="relative mb-8 text-[2.8rem] font-bold leading-[3.2rem] text-crimson lg:text-[3.8rem] lg:leading-[4.56rem]"
 		>
 			Mentions légales
 		</h1>
 		<p
-			class="mb-16 text-[1.4rem] leading-[1.8rem] text-slate-gray lg:text-[1.6rem] lg:leading-[2.2rem]"
+			class="relative mb-16 text-[1.4rem] leading-[1.8rem] text-slate-gray lg:text-[1.6rem] lg:leading-[2.2rem]"
 		>
 			Conformément aux dispositions des articles 6-III et 19 de la Loi n° 2004-575 du 21 juin 2004
 			pour la Confiance dans l'économie numérique, dite L.C.E.N., nous portons à la connaissance des

@@ -10,7 +10,7 @@
 	let isInView: boolean;
 	const options: Options = {
 		unobserveOnEnter: true,
-		rootMargin: '-200px'
+		rootMargin: '0px'
 	};
 
 	const handleChange = ({ detail }: CustomEvent<ObserverEventDetails>) => {
@@ -19,7 +19,7 @@
 </script>
 
 <div
-	class="relative items-center justify-center lg:flex lg:h-screen bg-black"
+	class="relative items-center justify-center bg-black lg:flex lg:h-screen"
 	use:inview={options}
 	on:inview_change={handleChange}
 >
@@ -36,7 +36,7 @@
 		<Logo newClass="max-w-[16rem] 2xl:max-w-[20rem] w-full h-auto" />
 	</div>
 
-	<div class="big container flex items-center justify-between max-lg:flex-col lg:gap-56 relative z-20">
+	<div class="big container flex items-center justify-between max-lg:flex-col lg:gap-56">
 		<div class="relative flex flex-1 flex-col max-lg:px-10 max-lg:pb-20 max-lg:pt-5">
 			<div class="absolute inset-0 h-full w-full lg:hidden">
 				{#if isInView}
@@ -47,10 +47,10 @@
 					/>
 				{/if}
 			</div>
-			<Logo newClass="max-w-[15rem] w-full h-auto mx-auto lg:hidden" />
+			<Logo newClass="max-w-[15rem] w-full h-auto mx-auto lg:hidden relative" />
 
 			<h1
-				class="text-[3rem] font-bold leading-[3.5rem] text-white max-lg:mt-16 max-lg:text-center lg:text-[7rem] lg:leading-[8.4rem] {isInView
+				class="relative text-[3rem] font-bold leading-[3.5rem] text-white max-lg:mt-16 max-lg:text-center lg:text-[7rem] lg:leading-[8.4rem] {isInView
 					? 'animate-fade-right'
 					: 'opacity-0'}"
 			>
@@ -58,14 +58,14 @@
 				><br />avec Cafés Richard
 			</h1>
 			<h2
-				class="mt-8 font-highlight text-[1.6rem] font-bold italic leading-[1.2rem] text-white max-lg:text-center lg:text-[2.5rem] lg:leading-[2.2rem] {isInView
+				class="relative mt-8 font-highlight text-[1.6rem] font-bold italic leading-[1.2rem] text-white max-lg:text-center lg:text-[2.5rem] lg:leading-[2.2rem] {isInView
 					? 'animate-fade-right'
 					: 'opacity-0'}"
 			>
 				Plus qu’une pause, un gain de productivité !
 			</h2>
 			<p
-				class="mt-16 text-[1.5rem] leading-[1.8rem] text-white max-lg:px-12 max-lg:text-center lg:text-[1.6rem] lg:leading-[2.2rem] {isInView
+				class="relative mt-16 text-[1.5rem] leading-[1.8rem] text-white max-lg:px-12 max-lg:text-center lg:text-[1.6rem] lg:leading-[2.2rem] {isInView
 					? 'animate-fade-right'
 					: 'opacity-0'}"
 			>
@@ -74,7 +74,7 @@
 				fidélisant vos collaborateurs, et renforçant ainsi votre marque employeur.<br />
 				Véritable team-builder, avec la pause-café Richard, les idées fusent !
 			</p>
-			<div class="mt-16 flex justify-between gap-8 lg:mt-32">
+			<div class="relative mt-16 flex justify-between gap-8 lg:mt-32">
 				<div
 					class="flex items-center gap-5 animate-delay-[250ms] max-lg:flex-col {isInView
 						? 'animate-fade'
@@ -131,7 +131,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="w-full max-w-[55rem] max-lg:bg-crimson max-lg:px-8 max-lg:py-14">
+		<div class="relative z-10 w-full max-w-[55rem] max-lg:bg-crimson max-lg:px-8 max-lg:py-14">
 			<LeadForm />
 		</div>
 	</div>

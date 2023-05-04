@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { inview } from 'svelte-inview';
 	import type { ObserverEventDetails, Options } from 'svelte-inview';
+	import { page } from '$app/stores';
+
 	import Mug from '$lib/components/svg/Mug.svelte';
 	import Sav from '$lib/components/svg/SAV.svelte';
 	import Cta from '$lib/components/common/CTA.svelte';
@@ -8,7 +10,7 @@
 	let isInView: boolean;
 	const options: Options = {
 		unobserveOnEnter: true,
-		rootMargin: '-200px'
+		rootMargin: '0px'
 	};
 
 	const handleChange = ({ detail }: CustomEvent<ObserverEventDetails>) => {
@@ -160,7 +162,9 @@
 	<p class="text-center text-[1.3rem] leading-[1.6rem] text-slate-gray">
 		{@html offer.legals}
 	</p>
-	<div>
-		<Cta label="Demandez-nous un devis personnalisé" />
-	</div>
+	{#if !$page.route.id.includes('confirmation')}
+		<div>
+			<Cta label="Demandez-nous un devis personnalisé" />
+		</div>
+	{/if}
 </div>

@@ -12,7 +12,7 @@
 		bind:value
 		type="text"
 		id={content}
-		class="w-full rounded-3xl border-[2px] border-solid px-6 py-5 text-[1.6rem] font-semibold leading-[1.9rem] {error
+		class="w-full rounded-3xl border-[2px] border-solid px-6 py-5 text-[1.6rem] font-semibold leading-[1.9rem] focus-visible:outline-black {error
 			? 'border-crimson'
 			: 'border-geyser'}"
 	/>

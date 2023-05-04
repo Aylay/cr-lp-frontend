@@ -1,6 +1,6 @@
 <script lang="ts">
-	export let newClass: string = '';
-	export let color: string = 'fill-crimson';
+	export let newClass = '';
+	export let color = 'fill-crimson';
 </script>
 
 <svg
