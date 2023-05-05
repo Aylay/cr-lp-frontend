@@ -23,9 +23,9 @@
 		property="og:description"
 		content="Cafés Richard vous propose un abonnement en café grains, POD ou capsule qui associe la machine à café, le café et les services tout compris. Abonnez-vous en toute sérénité à nos solutions café pour une pause-café au bureau tout compris."
 	/>
-	<meta property="og:image" content="/img/ocs-cafes-richard.jpg" />
-	<meta property="og:image:width" content="3840" />
-	<meta property="og:image:height" content="1854" />
+	<meta property="og:image" content="/img/og-abonnement-ocs-cafes-richard.jpg" />
+	<meta property="og:image:width" content="2400" />
+	<meta property="og:image:height" content="1260" />
 </svelte:head>
 
 <HpBlock1 />
