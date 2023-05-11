@@ -10,7 +10,7 @@
 		<p
 			class="text-center text-[1.4rem] leading-[1.8rem] text-white lg:text-[1.6rem] lg:leading-[2.2rem]"
 		>
-			+33 (0)6 37 79 78 17<br />ocs@richard.fr
+			<span data-tel="+33 (0)6 37 79 78 17" class="before:content-[attr(data-tel)] before:[unicode-bidi:bidi-override]"></span><br /><span data-user="ocs" data-website="richard.fr" class="before:content-[attr(data-user)'\0040'attr(data-website)] before:[unicode-bidi:bidi-override]"></span>
 		</p>
 		<p
 			class="text-center text-[1.4rem] leading-[1.8rem] text-white lg:text-[1.6rem] lg:leading-[2.2rem]"
