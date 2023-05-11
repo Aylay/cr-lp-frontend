@@ -29,13 +29,4 @@
 		class="text-[1.2rem] leading-[1.7rem] hover:underline lg:text-[1.4rem]"
 		>Mentions légales & Politique RGPD</a
 	>
-
-
-	<p class="text-[1.2rem] leading-[1.7rem] lg:text-[1.4rem]">|</p>
-	<a
-		href="/confirmation"
-		title="Mentions légales"
-		class="text-[1.2rem] leading-[1.7rem] hover:underline lg:text-[1.4rem]"
-		>Mentions légales & Politique RGPD</a
-	>
 </div>
