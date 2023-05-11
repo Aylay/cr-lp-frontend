@@ -47,7 +47,7 @@
 			},
 			{
 				nbCoffee: 1875,
-				text1: 'Machine Jura WX6',
+				text1: 'Machine Jura X6',
 				text2: '15Kg Café Tradition',
 				price: 360,
 				unitPrice: '0,19'
