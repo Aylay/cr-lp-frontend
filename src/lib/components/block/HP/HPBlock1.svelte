@@ -62,7 +62,7 @@
 					? 'animate-fade-right'
 					: 'opacity-0'}"
 			>
-				Plus qu’une pause, un gain de productivité !
+				Plus qu’une pause, un g(r)ain de productivité !
 			</h2>
 			<p
 				class="relative mt-16 text-[1.5rem] leading-[1.8rem] text-white max-lg:px-12 max-lg:text-center lg:text-[1.6rem] lg:leading-[2.2rem] {isInView
