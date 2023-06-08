@@ -18,6 +18,8 @@
 		isInView = detail.inView;
 	};
 
+	export let showPrices: boolean
+
 	const offer = {
 		id: 'grains',
 		img: {
@@ -117,7 +119,7 @@
 	</div>
 </div>
 
-<div class="container mt-14 flex items-center justify-between max-lg:flex-col max-lg:px-8 lg:mt-28">
+<div class="container mt-14 flex items-end justify-between max-lg:flex-col max-lg:px-8 lg:mt-28">
 	<div class="w-full lg:max-w-[30%]">
 		<h3 class="mb-8 font-highlight text-[2rem] font-bold leading-[3rem] lg:mb-16 lg:text-[2.5rem]">
 			Abonnement <span class="uppercase">{offer.id}</span> Machine & café
@@ -165,6 +167,7 @@
 							</p>
 						</div>
 					</div>
+					{#if showPrices}
 					<hr class="mx-auto my-5 h-[2px] w-12 bg-crimson" />
 					<p class="pt-4 font-highlight text-[2rem] font-bold italic leading-[2.2rem] text-crimson">
 						{unitOffer.price}€ HT /mois
@@ -172,6 +175,7 @@
 					<p class="mt-2 text-[1.4rem] leading-[2.2rem] text-slate-gray">
 						{unitOffer.unitPrice}€ ht /café
 					</p>
+					{/if}
 				</div>
 			{/each}
 		</div>

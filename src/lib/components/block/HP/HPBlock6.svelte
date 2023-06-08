@@ -15,6 +15,8 @@
 		isInView = detail.inView;
 	};
 
+	const showPrices = false;
+
 	const prezOffers = [
 		{
 			img: {
@@ -134,8 +136,8 @@
 	</div>
 </div>
 
-<HpAbonnement1 />
+<HpAbonnement1 {showPrices} />
 
-<HpAbonnement2 />
+<HpAbonnement2 {showPrices} />
 
-<HpAbonnement3 />
+<HpAbonnement3 {showPrices} />
