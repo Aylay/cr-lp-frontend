@@ -5,7 +5,9 @@
 </script>
 
 <div class="flex flex-1 flex-col gap-2">
-	<label for={content} class="text-[1.4rem] leading-[1.7rem] text-slate-gray">
+	<label for={content} class="text-[1.4rem] leading-[1.7rem] {error
+		? 'text-crimson'
+		: 'text-slate-gray'}">
 		{content}<sup class="text-crimson"> *</sup>
 	</label>
 	<input

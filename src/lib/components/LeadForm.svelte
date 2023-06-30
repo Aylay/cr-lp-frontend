@@ -147,9 +147,10 @@
 					? 'border-crimson'
 					: 'border-geyser'} {legals || active ? 'bg-crimson' : 'bg-transparent'} "
 			/>
-			<p class="flex-1 text-[1.4rem] leading-[1.7rem] text-slate-gray">
-				En soumettant ce formulaire, j'accepte que les informations saisies soient traitées dans le
-				cadre de ma demande et de la relation commerciale qui en découle.
+			<p class="flex-1 text-[1.4rem] leading-[1.7rem] {legalsError
+				? 'text-crimson'
+				: 'text-slate-gray'}">
+				En soumettant ce formulaire, j'accepte que les informations saisies soient traitées dans le cadre de ma demande et de la relation commerciale qui en découle.<sup class="text-crimson"> *</sup>
 			</p>
 		</div>
 	</Hoverable>
