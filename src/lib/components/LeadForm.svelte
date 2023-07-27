@@ -44,6 +44,7 @@
 			telephone: phone,
 			codePostal: postalCode
 		};
+		console.log(data)
 
 		fetch(import.meta.env.VITE_STRAPI_URL + '/api/prospects', {
 			method: 'POST',
