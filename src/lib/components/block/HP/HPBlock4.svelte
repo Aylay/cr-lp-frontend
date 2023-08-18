@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import { inview } from 'svelte-inview';
 	import type { ObserverEventDetails, Options } from 'svelte-inview';
 	import Cta from '$lib/components/common/CTA.svelte';
@@ -81,6 +82,10 @@
 	</p>
 
 	<div class="mt-10 flex justify-center">
+		{#if $page.route.id === '/offre'}
+		<Cta label="Profiter d'1 mois offert" />
+		{:else}
 		<Cta label="Demandez-nous un devis personnalisé" />
+		{/if}
 	</div>
 </div>

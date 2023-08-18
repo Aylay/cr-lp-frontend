@@ -3,6 +3,8 @@
 	import { inview } from 'svelte-inview';
 	import type { ObserverEventDetails, Options } from 'svelte-inview';
 	import LpFooter from '$lib/components/block/layout/LPFooter.svelte';
+	import { afterNavigate } from '$app/navigation';
+	import { base } from '$app/paths'
 
 	let isInView: boolean;
 	const options: Options = {
@@ -13,14 +15,20 @@
 	const handleChange = ({ detail }: CustomEvent<ObserverEventDetails>) => {
 		isInView = detail.inView;
 	};
+
+	let previousPage : string = base ;
+
+	afterNavigate(({from}) => {
+		previousPage = from?.url.pathname || previousPage
+	}) 
 </script>
 
 <svelte:head>
 	<title>Mentions légales | Cafés Richard</title>
 	<meta name="title" content="Mentions légales | Cafés Richard" />
 	<meta property="og:title" content="Mentions légales | Cafés Richard" />
-	<meta name="description" content="" />
-	<meta property="og:description" content="" />
+	<meta name="description" content="Mentions légales | Cafés " />
+	<meta property="og:description" content="Mentions légales | Cafés " />
 </svelte:head>
 
 <div class="relative" use:inview={options} on:inview_change={handleChange}>
@@ -44,9 +52,13 @@
 				<a
 					class="inline-block cursor-pointer rounded-[2.5rem] bg-crimson px-12 py-6 text-center text-[1.4rem] font-semibold leading-[1.9rem] text-white transition-colors hover:bg-black lg:text-[1.6rem]"
 					title="Demandez-nous un devis personnalisé"
-					href="/"
+					href={previousPage && previousPage === '/offre' ? '/offre' : '/'}
 				>
-					Demandez-nous un devis personnalisé
+				{#if previousPage && previousPage === '/offre'}
+				Profiter d'1 mois offert
+				{:else}
+				Demandez-nous un devis personnalisé
+				{/if}
 				</a>
 			</div>
 		</div>

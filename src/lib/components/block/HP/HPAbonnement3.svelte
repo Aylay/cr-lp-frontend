@@ -168,7 +168,11 @@
 	</p>
 	{#if !$page.route.id.includes('confirmation')}
 		<div>
+			{#if $page.route.id === '/offre'}
+			<Cta label="Profiter d'1 mois offert" />
+			{:else}
 			<Cta label="Demandez-nous un devis personnalisé" />
+			{/if}
 		</div>
 	{/if}
 </div>

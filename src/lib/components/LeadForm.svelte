@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
 	import SpecificInput from '$lib/components/block/utilities/SpecificInput.svelte';
 	import Hoverable from '$lib/components/utilities/Hoverable.svelte';
@@ -35,6 +36,8 @@
 			return;
 		}
 
+		const lp = $page.route && $page.route.id ? $page.route.id : '/'
+
 		const data = {
 			prenom: firstName,
 			nom: lastName,
@@ -42,9 +45,9 @@
 			fonction: job,
 			email: email,
 			telephone: phone,
-			codePostal: postalCode
+			codePostal: postalCode,
+			lp: lp === '/' ? 'HP' : lp.substring(1)
 		};
-		console.log(data)
 
 		fetch(import.meta.env.VITE_STRAPI_URL + '/api/prospects', {
 			method: 'POST',
@@ -160,6 +163,10 @@
 		class="w-full rounded-3xl bg-crimson p-6 text-center text-[1.4rem] font-semibold leading-[1.9rem] text-white transition-colors hover:bg-black lg:text-[1.6rem]"
 		on:click|preventDefault={addProspect}
 	>
+		{#if $page.route.id === '/offre'}
+		Profiter d'1 mois offert
+		{:else}
 		Demander plus d'informations
+		{/if}
 	</button>
 </form>

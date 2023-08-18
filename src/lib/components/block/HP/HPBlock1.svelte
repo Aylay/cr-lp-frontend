@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { page } from '$app/stores';
 	import { inview } from 'svelte-inview';
 	import type { ObserverEventDetails, Options } from 'svelte-inview';
 	import Logo from '$lib/components/svg/Logo.svelte';
@@ -16,6 +17,7 @@
 	const handleChange = ({ detail }: CustomEvent<ObserverEventDetails>) => {
 		isInView = detail.inView;
 	};
+
 </script>
 
 <div
@@ -49,14 +51,26 @@
 			</div>
 			<Logo newClass="max-w-[15rem] w-full h-auto mx-auto lg:hidden relative" />
 
+			{#if $page.route.id === '/offre'}
+			<h1
+				class="relative text-[3rem] font-bold leading-[3.5rem] text-white max-lg:mt-16 max-lg:text-center lg:text-[6rem] lg:leading-[8rem] {isInView
+					? 'animate-fade-right'
+					: 'opacity-0'}"
+			>
+				<span class="">La pause-café</span>
+				<br /><span class="relative inline-block bg-crimson px-6 pb-2 lg:px-8">offerte pendant 1 mois</span>
+				<br />avec Cafés Richard
+			</h1>
+			{:else}
 			<h1
 				class="relative text-[3rem] font-bold leading-[3.5rem] text-white max-lg:mt-16 max-lg:text-center lg:text-[7rem] lg:leading-[8.4rem] {isInView
 					? 'animate-fade-right'
 					: 'opacity-0'}"
 			>
-				<span class="relative inline-block bg-crimson px-6 pb-2 lg:px-8 lg:pb-4">La pause-café</span
-				><br />avec Cafés Richard
+				<span class="relative inline-block bg-crimson px-6 pb-2 lg:px-8 lg:pb-4">La pause-café</span>
+				<br />avec Cafés Richard
 			</h1>
+			{/if}
 			<h2
 				class="relative mt-8 font-highlight text-[1.6rem] font-bold italic leading-[1.2rem] text-white max-lg:text-center lg:text-[2.5rem] lg:leading-[2.2rem] {isInView
 					? 'animate-fade-right'
