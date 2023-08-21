@@ -55,7 +55,7 @@
 					href={previousPage && previousPage === '/offre' ? '/offre' : '/'}
 				>
 				{#if previousPage && previousPage === '/offre'}
-				Profiter d'1 mois offert
+				Profiter d'1 mois offert<sup>*</sup>
 				{:else}
 				Demandez-nous un devis personnalisé
 				{/if}

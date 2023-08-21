@@ -56,7 +56,9 @@
 			}
 		],
 		legals:
-			'Tarif à titre indicatif – demandez-nous un devis sur-mesure - Engagement 12 mois – livraison et SAV inclus'
+			'Tarif à titre indicatif – demandez-nous un devis sur-mesure - Engagement 12 mois – livraison et SAV inclus',
+		legalsOffer:
+			'Tarif à titre indicatif – demandez-nous un devis sur-mesure - Engagement 24 mois – livraison et SAV inclus'
 	};
 </script>
 
@@ -184,12 +186,16 @@
 
 <div class="container mt-10 flex flex-col items-center gap-10 pb-32 max-lg:px-8">
 	<p class="text-center text-[1.3rem] leading-[1.6rem] text-slate-gray">
+		{#if $page.route.id === '/offre'}
+		{@html offer.legalsOffer}
+		{:else}
 		{@html offer.legals}
+		{/if}
 	</p>
 	{#if !$page.route.id.includes('confirmation')}
 		<div>
 			{#if $page.route.id === '/offre'}
-			<Cta label="Profiter d'1 mois offert" />
+			<Cta label="Profiter d'1 mois offert<sup>*</sup>" />
 			{:else}
 			<Cta label="Demandez-nous un devis personnalisé" />
 			{/if}

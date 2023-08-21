@@ -53,12 +53,12 @@
 
 			{#if $page.route.id === '/offre'}
 			<h1
-				class="relative text-[3rem] font-bold leading-[3.5rem] text-white max-lg:mt-16 max-lg:text-center lg:text-[6rem] lg:leading-[8rem] {isInView
+				class="relative text-[3rem] font-bold leading-[3.5rem] text-white max-lg:mt-16 max-lg:text-center lg:text-[5.8rem] lg:leading-[8rem] {isInView
 					? 'animate-fade-right'
 					: 'opacity-0'}"
 			>
 				<span class="">La pause-café</span>
-				<br /><span class="relative inline-block bg-crimson px-6 pb-2 lg:px-8">offerte pendant 1 mois</span>
+				<br /><span class="relative inline-block bg-crimson px-6 py-2 lg:px-8">offerte pendant 1 mois<sup>*</sup></span>
 				<br />avec Cafés Richard
 			</h1>
 			{:else}

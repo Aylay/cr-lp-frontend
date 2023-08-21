@@ -83,7 +83,7 @@
 
 	<div class="mt-10 flex justify-center">
 		{#if $page.route.id === '/offre'}
-		<Cta label="Profiter d'1 mois offert" />
+		<Cta label="Profiter d'1 mois offert<sup>*</sup>" />
 		{:else}
 		<Cta label="Demandez-nous un devis personnalisé" />
 		{/if}

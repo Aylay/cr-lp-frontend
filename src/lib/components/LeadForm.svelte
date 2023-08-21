@@ -159,14 +159,22 @@
 		</div>
 	</Hoverable>
 
-	<button
-		class="w-full rounded-3xl bg-crimson p-6 text-center text-[1.4rem] font-semibold leading-[1.9rem] text-white transition-colors hover:bg-black lg:text-[1.6rem]"
-		on:click|preventDefault={addProspect}
-	>
+	<div class="flex flex-col gap-4">
+		<button
+			class="w-full rounded-3xl bg-crimson p-6 text-center text-[1.4rem] font-semibold leading-[1.9rem] text-white transition-colors hover:bg-black lg:text-[1.6rem]"
+			on:click|preventDefault={addProspect}
+		>
+			{#if $page.route.id === '/offre'}
+			Profiter d'1 mois offert<sup>*</sup>
+			{:else}
+			Demander plus d'informations
+			{/if}
+		</button>
+
 		{#if $page.route.id === '/offre'}
-		Profiter d'1 mois offert
-		{:else}
-		Demander plus d'informations
+		<p class="text-slate-gray text-[1.2rem] leading-[1.5rem]">
+			<sup>*</sup>Offre réservée aux entreprises, valable jusqu’au 30 septembre 2023 pour toute souscription d’un contrat d’abonnement de 24 mois.
+		</p>
 		{/if}
-	</button>
+	</div>
 </form>

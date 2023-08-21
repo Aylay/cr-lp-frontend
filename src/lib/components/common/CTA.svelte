@@ -23,5 +23,5 @@
 	title={label}
 	on:click={() => scrollToForm()}
 >
-	{label}
+	{@html label}
 </div>
