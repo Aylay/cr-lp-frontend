@@ -30,13 +30,13 @@
 
 	let onError = false;
 
+	const lp = $page.url && ($page.url.pathname === '/') ? 'sans offre' : '1 mois offert'
+
 	function addProspect() {
 		checkFormError();
 		if (onError) {
 			return;
 		}
-
-		const lp = $page.route && $page.route.id ? $page.route.id : '/'
 
 		const data = {
 			prenom: firstName,
@@ -46,7 +46,7 @@
 			email: email,
 			telephone: phone,
 			codePostal: postalCode,
-			lp: lp === '/' ? 'HP' : lp.substring(1)
+			lp: lp
 		};
 
 		fetch(import.meta.env.VITE_STRAPI_URL + '/api/prospects', {
