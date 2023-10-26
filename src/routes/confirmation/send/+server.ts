@@ -31,7 +31,7 @@ export async function POST({ request }) {
 
 	const options = {
 		from: 'ocs@richard.fr',
-		to: 'lattali@beavers-agency.fr',
+		to: 'ocs@richard.fr',
 		bcc: 'mcblaizot@beavers-agency.fr',
 		subject: 'Formulaire abonnement',
 		html: textMail
