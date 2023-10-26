@@ -32,7 +32,7 @@
 
 	const lp = $page.url && ($page.url.pathname === '/') ? 'sans offre' : '1 mois offert'
 
-	function addProspect() {
+	async function addProspect() {
 		checkFormError();
 		if (onError) {
 			return;
@@ -49,7 +49,7 @@
 			lp: lp
 		};
 
-		fetch(import.meta.env.VITE_STRAPI_URL + '/api/prospects', {
+		await fetch('/confirmation/send', {
 			method: 'POST',
 			body: JSON.stringify({ data }),
 			headers: {
